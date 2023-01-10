@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="49.999996mm"
+   height="14.081182mm"
+   viewBox="0 0 49.999997 14.081182"
+   version="1.1"
+   id="svg4144"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="Logo_Fruits.svg">
+  <defs
+     id="defs4138" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="249.3859"
+     inkscape:cy="15.280478"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="900"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata4141">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-136.93513,1125.8763)">
+    <text
+       transform="scale(0.99968782,1.0003123)"
+       style="font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.19776px;font-family:'Mosk Light 300';-inkscape-font-specification:MoskLight300;writing-mode:lr-tb;display:inline;fill:#be272d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352668"
+       id="text1295"
+       x="77.77359"
+       y="49.069225"><tspan
+         x="77.77359 79.08342 82.64389 85.720963 88.335434 91.350128 93.990585 95.300415 99.048004 102.60847 105.22295"
+         y="49.069225"
+         sodipodi:role="line"
+         id="tspan1293"
+         style="stroke-width:0.352668">INVERSIONES</tspan></text>
+    <text
+       transform="scale(0.99969059,1.0003095)"
+       style="font-variant:normal;font-weight:800;font-stretch:normal;font-size:5.6427px;font-family:'Mosk Extra-Bold 800';-inkscape-font-specification:MoskExtra-Bold800;writing-mode:lr-tb;display:inline;fill:#be272d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.352669"
+       id="text1299"
+       x="76.358353"
+       y="54.457825"><tspan
+         x="76.358353 80.223602 83.552795 87.344696 91.379227 94.939758 97.952957 101.74486 105.86403"
+         y="54.457825"
+         sodipodi:role="line"
+         id="tspan1297"
+         style="stroke-width:0.352669">VERDYFRUT</tspan></text>
+    <text
+       transform="scale(0.9996878,1.0003123)"
+       style="font-variant:normal;font-weight:normal;font-size:7.8408px;font-family:Verdana;-inkscape-font-specification:Verdana;writing-mode:lr-tb;fill:#be272d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.531995"
+       id="text6484"
+       x="139.01268"
+       y="-1119.7054"><tspan
+         x="139.01268 140.98073 146.35164 150.98553 154.92944 159.47713 163.45238 165.42043 171.07364 176.44455 180.38846"
+         y="-1119.7054"
+         sodipodi:role="line"
+         id="tspan6482"
+         style="stroke-width:0.531995">INVERSIONES</tspan></text>
+    <text
+       transform="scale(0.99969059,1.0003095)"
+       style="font-variant:normal;font-weight:bold;font-size:8.51195px;font-family:Verdana;-inkscape-font-specification:Verdana-Bold;writing-mode:lr-tb;fill:#be272d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.532"
+       id="text6488"
+       x="136.87776"
+       y="-1111.58"><tspan
+         x="136.87776 142.69995 147.72202 153.44206 159.52809 164.89064 169.43604 175.14757 181.3613"
+         y="-1111.58"
+         sodipodi:role="line"
+         id="tspan6486"
+         style="stroke-width:0.532">VERDYFRUT</tspan></text>
+  </g>
+</svg>

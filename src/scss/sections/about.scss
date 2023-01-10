@@ -1,0 +1,169 @@
+.about {
+   background-color: #f7f6f6;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+   }
+   // .about__image-ibg
+   &__image-ibg {
+      overflow: hidden;
+      @media (max-width: $tablet) {
+         min-height: rem(370);
+      }
+      @media (max-width: $mobile) {
+         min-height: rem(300);
+      }
+      @media (max-width: $mobileSmall) {
+         min-height: rem(264);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            img {
+               transform: scale(1.05);
+            }
+         }
+      }
+      img {
+         transition: all 0.6s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      }
+   }
+   // .about__date
+   &__date {
+      position: absolute;
+      @include adaptiveValue("right", 174, 77, 0, 1600, 768);
+      text-align: right;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+      color: #fbfbfb;
+      @include adaptiveValue("font-size", 109, 60, 0, 1600, 768);
+      font-weight: 500;
+      @media (max-width: $mobile) {
+         font-size: rem(46);
+         right: 38px;
+      }
+   }
+   // .about__wrap
+   &__wrap {
+      max-width: rem(944);
+      padding-left: rem(130);
+      position: relative;
+      @include adaptiveValue("padding-left", 130, 30, 0, 1600, 991);
+      @media (max-width: em(1300)) {
+         padding-right: rem(90);
+      }
+      @media (max-width: $tablet) {
+         padding-right: rem(15);
+         padding-left: rem(48);
+      }
+      @media (max-width: $mobile) {
+         padding: rem(0) rem(15);
+      }
+   }
+   // .about__content
+   &__content {
+      max-width: rem(457);
+      padding: rem(88) 0;
+      position: relative;
+      z-index: 2;
+      @media (max-width: $pc) {
+         padding: rem(40) 0;
+         max-width: rem(488);
+      }
+      @media (max-width: $mobile) {
+         padding: rem(25) 0 rem(45);
+      }
+      @media (max-width: em(600)) {
+         max-width: 100%;
+      }
+   }
+   // .about__text-decor
+   &__text-decor {
+      position: absolute;
+      opacity: 0.07;
+      color: #636363;
+      font-size: 99px;
+      font-weight: 600;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      top: 95px;
+      right: 116px;
+      @media (max-width: $pc) {
+         font-size: rem(60);
+         top: 40px;
+         right: 70px;
+      }
+      @media (max-width: $tablet) {
+         font-size: rem(50);
+      }
+      @media (max-width: em(600)) {
+         display: none;
+      }
+   }
+   // .about__rocket
+   &__rocket {
+      position: absolute;
+      width: 300px;
+      bottom: 0;
+      right: 64px;
+      @media (max-width: $pc) {
+         width: rem(200);
+      }
+      @media (max-width: $tablet) {
+         width: rem(184);
+         bottom: 12px;
+         right: 22px;
+      }
+      @media (max-width: em(600)) {
+         display: none;
+      }
+   }
+   // .about__head
+   &__head {
+      will-change: transform;
+      text-align: left;
+
+      &:not(:last-child) {
+         margin-bottom: rem(28);
+         @media (max-width: $pc) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+   // .about__text
+   &__text {
+      will-change: transform;
+      font-family: "MyriadPro";
+      color: #5b5b5b;
+      font-size: rem(20);
+      line-height: math.div(27, 18);
+      letter-spacing: 0.09px;
+      @media (max-width: $tablet) {
+         font-size: rem(16);
+      }
+
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(29);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(13);
+            }
+         }
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(56);
+         @media (max-width: $pc) {
+            margin-bottom: rem(30);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(20);
+         }
+      }
+   }
+   // .about__button
+   &__button {
+   }
+}

@@ -1,0 +1,193 @@
+.players {
+   // .players__container
+   &__container {
+   }
+   // .players__head
+   &__head {
+      &:not(:last-child) {
+         margin-bottom: rem(54);
+         @media (max-width: $pc) {
+            margin-bottom: rem(31);
+         }
+      }
+   }
+   &__slider {
+      &:not(:last-child) {
+         margin-bottom: rem(41);
+      }
+   }
+   // .players__grid-layout
+   &__wrapper.swiper-wrapper {
+      @media (min-width: $mobile) {
+         display: grid;
+         gap: rem(70) rem(30);
+         grid-template-columns: repeat(4, 1fr);
+      }
+      @media (max-width: $tablet) {
+         gap: rem(15);
+      }
+      @media (max-width: $mobile) {
+         gap: 0;
+      }
+   }
+   // .players__button-wrap
+   &__button-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: rem(60);
+      @media (max-width: $pc) {
+         margin-top: rem(35);
+      }
+   }
+   // .players__button
+   &__button {
+   }
+   &__pagination {
+      margin-top: rem(25);
+      @media (min-width: $mobile) {
+         display: none;
+      }
+   }
+}
+
+.card-player {
+   &.women {
+      .card-player__top {
+         background: rgba(72, 172, 206, 0.1);
+         &::after {
+            background: rgba(72, 172, 206, 0.08);
+         }
+      }
+      .card-player__label {
+         color: rgba(72, 172, 206, 1);
+      }
+      .card-player__label {
+         &::before {
+            background: rgba(72, 172, 206, 0.25);
+         }
+         &::after {
+            background: rgba(72, 172, 206, 1);
+         }
+      }
+   }
+   // .card-player__top
+   &__top {
+      @include adaptiveValue("height", 315, 220, 0, 1600, 768);
+      padding-top: rem(42);
+      background: rgba(255, 124, 68, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+      @media (max-width: $mobile) {
+         padding-top: rem(20);
+         @include adaptiveValue("height", 220, 162, 0, 768, 320);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            &::after {
+               transform: translateX(20px) skewX(-25deg);
+            }
+         }
+      }
+      &::after {
+         content: "";
+         background: rgba(255, 124, 68, 0.08);
+         position: absolute;
+         width: 80px;
+         height: 140%;
+         right: 58px;
+         transform: skewX(-25deg);
+         bottom: 0;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         @media (max-width: $tablet) {
+            width: 60px;
+            right: 48px;
+         }
+      }
+   }
+   // .card-player__avatar
+   &__avatar {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: percent(201, 261);
+   }
+   &__status {
+      color: #5b5b5b;
+      font-family: "MyriadPro";
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+   }
+   // .card-player__label
+   &__label {
+      text-transform: uppercase;
+      font-size: 20px;
+      color: $orangeColor;
+      font-weight: 500;
+      padding-left: rem(89);
+      position: relative;
+      @media (max-width: $tablet) {
+         font-size: rem(16);
+         padding-left: rem(73);
+      }
+      @media (max-width: $mobile) {
+         padding-left: rem(64);
+      }
+      &::after,
+      &::before {
+         content: "";
+         height: 24px;
+         transform: translate(0, -50%) skewX(-25deg);
+         background: rgba(255, 124, 68, 0.25);
+         position: absolute;
+         top: 50%;
+         width: 100px;
+         left: -30px;
+         @media (max-width: $tablet) {
+            height: rem(20);
+            left: rem(-40);
+         }
+         @media (max-width: $mobile) {
+            height: rem(17);
+            left: rem(-50);
+         }
+      }
+      &::after {
+         background-color: #ff7c44;
+         transform: translate(-15px, -50%) skewX(-25deg);
+         @media (max-width: $mobile) {
+            transform: translate(-10px, -50%) skewX(-25deg);
+         }
+      }
+   }
+   // .card-player__content
+   &__content {
+      padding-top: rem(31);
+      @media (max-width: $pc) {
+         padding-top: rem(21);
+      }
+   }
+   // .card-player__name
+   &__name {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: rem(15);
+      font-size: 20px;
+      font-weight: 500;
+      color: #272727;
+      @media (max-width: $tablet) {
+         font-size: rem(16);
+         gap: rem(10);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+         @media (max-width: $pc) {
+            margin-bottom: rem(11);
+         }
+      }
+   }
+}

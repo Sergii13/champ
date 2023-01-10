@@ -1,0 +1,106 @@
+.gallery {
+   background-color: #f7f6f6;
+   // .gallery__container
+   &__container {
+   }
+   // .gallery__head
+   &__head {
+      &:not(:last-child) {
+         margin-bottom: rem(54);
+         @media (max-width: $pc) {
+            margin-bottom: rem(45);
+         }
+         @media (max-width: $tablet) {
+            margin-bottom: rem(31);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(15);
+         }
+      }
+   }
+   // .gallery__row
+   &__row {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(30);
+      @media (max-width: $tablet) {
+         gap: rem(17);
+      }
+      @media (max-width: $mobile) {
+         display: grid;
+         gap: rem(35);
+      }
+   }
+   // .gallery__slider
+   &__slider {
+   }
+   // .gallery__wrapper
+   &__wrapper {
+      &:not(:last-child) {
+         margin-bottom: rem(53);
+         @media (max-width: $pc) {
+            margin-bottom: rem(30);
+         }
+         @media (max-width: $tablet) {
+            margin-bottom: rem(25);
+         }
+      }
+   }
+   // .gallery__slide
+   &__slide {
+   }
+   // .gallery__grid-layout
+   &__grid-layout {
+      display: grid;
+      gap: rem(30);
+      grid-template-columns: repeat(2, 1fr);
+      @media (max-width: $tablet) {
+         gap: rem(16);
+      }
+      @media (max-width: $mobile) {
+         gap: rem(10);
+      }
+   }
+   // .gallery__image-ibg
+   &__image-ibg {
+      border-radius: 2px;
+      overflow: hidden;
+      display: block;
+      padding-bottom: percent(447, 732);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: $pc) {
+         padding-bottom: percent(380, 732);
+      }
+      @media (max-width: $tablet) {
+         padding-bottom: percent(447, 732);
+      }
+      @media (max-width: $mobile) {
+         padding-bottom: percent(216, 290);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            opacity: 0.8;
+         }
+      }
+      &.one {
+         grid-column: 1/3;
+      }
+   }
+   // .gallery__screen
+   &__screen {
+      width: percent(357, 1140);
+      flex-shrink: 0;
+      @media (max-width: $tablet) {
+         width: rem(219);
+         iframe {
+            width: 100% !important;
+         }
+         .css-1dbjc4n.r-14lw9ot.r-1ets6dv.r-1q9bdsx.r-rs99b7.r-1udh08x {
+            max-height: rem(438) !important;
+         }
+      }
+      @media (max-width: $mobile) {
+         width: 100%;
+      }
+   }
+}

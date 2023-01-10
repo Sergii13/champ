@@ -1,0 +1,161 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.head {
+   text-align: center;
+   text-transform: uppercase;
+   // .head__subtitle
+   &__subtitle {
+      font-size: rem(21);
+      line-height: math.div(25, 21);
+      font-weight: 500;
+      color: $orangeColor;
+      letter-spacing: 0.41px;
+      @media (max-width: em(1600)) {
+         font-size: rem(18);
+      }
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(9);
+      }
+   }
+   // .head__title
+   &__title {
+      letter-spacing: 0.27px;
+      font-size: rem(55);
+      font-weight: 500;
+      line-height: math.div(65, 55);
+      @media (max-width: em(1600)) {
+         font-size: rem(40);
+      }
+      @media (max-width: $tablet) {
+         font-size: rem(30);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(28);
+      }
+   }
+}
+.section {
+   padding: rem(105) 0;
+   @media (max-width: em(1600)) {
+      padding: rem(70) 0;
+   }
+   @media (max-width: $tablet) {
+      padding: rem(35) 0 rem(37);
+   }
+}
+.pagination {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: rem(8);
+   @media (max-width: $tablet) {
+      gap: rem(5);
+   }
+   .swiper-pagination-bullet {
+      width: 8px;
+      cursor: pointer;
+      height: 8px;
+      border-radius: 3px;
+      background: rgba(144, 157, 161, 0.35);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: $tablet) {
+         width: 5px;
+         height: 5px;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background: rgba(144, 157, 161, 0.65);
+         }
+      }
+      &.swiper-pagination-bullet-active {
+         background-color: #858c8e;
+         width: 26px;
+         @media (max-width: $tablet) {
+            width: 19px;
+         }
+      }
+   }
+   &_white {
+      .swiper-pagination-bullet {
+         background: rgba(255, 255, 255, 0.25);
+         @media (any-hover: hover) {
+            &:hover {
+               background: rgba(255, 255, 255, 0.55);
+            }
+         }
+         &.swiper-pagination-bullet-active {
+            background: rgba(255, 255, 255, 1);
+         }
+      }
+   }
+}
+.icon-flag {
+   width: 22px;
+   height: 22px;
+   border-radius: 50%;
+   overflow: hidden;
+   @media (max-width: $tablet) {
+      width: 18px;
+      height: 18px;
+   }
+   @media (max-width: $mobileSmall) {
+      width: 14px;
+      height: 14px;
+   }
+   &.fi {
+      background-size: auto 100%;
+   }
+}
+.socials {
+   display: flex;
+   align-items: center;
+   gap: rem(14);
+   // .socials__text
+   &__text {
+      font-weight: 500;
+      @media (max-width: $tablet) {
+         font-size: rem(14);
+      }
+   }
+   // .socials__list
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+   }
+   // .socials__link
+   &__link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background-color: #045a6f;
+      @media (max-width: $tablet) {
+         width: 35px;
+         height: 35px;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            &.youtube {
+               background-color: #e50000;
+            }
+            &.twitter {
+               background-color: #00acee;
+            }
+            &.facebook {
+               background-color: #3b5998;
+            }
+            &.instagram {
+               background-color: #dd2a7b;
+            }
+         }
+      }
+   }
+}
+
+//====================================================================================================
