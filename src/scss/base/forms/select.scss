@@ -1,142 +1,168 @@
 // <SELECT>
 // Сніппет (HTML): sel
 .select {
-	min-width: 0;
-	position: relative;
-	// .select__body
-	&__body {
-		position: relative;
-	}
-	// .select__title
-	&__title {
-		color: inherit;
-		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
-		cursor: pointer;
-		width: 100%;
-		border-radius: 4px;
-	}
-	// .select__value
-	&__value {
-		display: flex;
-		min-width: 0;
-		align-items: center;
-		height: rem(30);
-		padding: 0 rem(15);
-		gap: rem(10);
-		> * {
-			flex: 1 1 auto;
-		}
-		&:after {
-			content: "";
-			align-self: stretch;
-			flex: 0 0 10px;
-			transition: all 0.3s ease 0s;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			._select-open & {
-				transform: rotate(-180deg);
-			}
-		}
-		&._select-pseudo-label {
-			&::before {
-				content: attr(data-pseudo-label);
-				opacity: 0.5;
-			}
-		}
-	}
-	// .select__content
-	&__content {
-		flex: 1 1 auto;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-	// .select__text
-	&__text {
-		flex: 1 1 auto;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
-	&__input {
-		width: 100%;
-		background-color: transparent;
-		height: 100%;
-	}
-	// .select__options
-	&__options {
-		color: #000;
-		position: absolute;
-		top: calc(100% - rem(1));
-		border-radius: 0 0 4px 4px;
-		min-width: 100%;
-		left: 0;
-		background-color: #fff;
-		border-top: 0;
-		border: 1px solid #d9d9d9;
-		border-top: 0;
-		padding: 10px 0px 5px 0px;
-	}
-	// .select__scroll
-	&__scroll {
-		overflow-y: auto;
-		overflow-x: hidden;
-		// Максимальна висота
-		max-height: 200px;
-		// Стилі скроллбару
-		.simplebar-scrollbar {
-			&::before {
-				//opacity: 1;
-			}
-		}
-	}
-	// .select__option
-	&__option {
-		width: 100%;
-		text-align: left;
-		cursor: pointer;
-		padding: 5px 15px;
-		color: inherit;
-		&._select-selected {
-			background-color: #eee;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background: #d9d9d9;
-			}
-		}
-	}
+   min-width: rem(180);
+   position: relative;
+   flex-shrink: 0;
+   @media (max-width: $tablet) {
+      min-width: rem(135);
+   }
+   @media (max-width: em(650)) {
+      min-width: rem(75);
+   }
+   // .select__body
+   &__body {
+      position: relative;
+   }
+   // .select__title
+   &__title {
+      color: inherit;
+      text-align: left;
+      background: $orangeColor;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 2px;
+      min-height: rem(45);
+      padding: rem(4) rem(20);
+      font-weight: 500;
+      font-size: rem(15);
+      color: #fff;
+      white-space: nowrap;
+      @media (max-width: $tablet) {
+         min-height: rem(40);
+         font-size: 13px;
+         padding: rem(4) rem(12);
+      }
+      @media (max-width: $mobile) {
+         min-height: rem(36);
+         padding: rem(4) rem(10);
+         font-size: rem(12);
+      }
+   }
+   // .select__value
+   &__value {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: rem(10);
+      > * {
+         flex: 1 1 auto;
+      }
+      &:after {
+         content: "";
+         flex: 0 0 10px;
+         width: 10px;
+         height: rem(7);
+         transition: all 0.3s ease 0s;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: url("@img/svg/arrow-white.svg") center / contain no-repeat;
+         ._select-open & {
+            transform: rotate(-180deg);
+         }
+      }
+      &._select-pseudo-label {
+         &::before {
+            content: attr(data-pseudo-label);
+            opacity: 0.5;
+         }
+      }
+   }
+   // .select__content
+   &__content {
+      flex: 1 1 auto;
+   }
+   // .select__text
+   &__text {
+      flex: 1 1 auto;
+   }
+   &__input {
+      width: 100%;
+      background-color: transparent;
+      height: 100%;
+   }
+   // .select__options
+   &__options {
+      color: #000;
+      position: absolute;
+      top: calc(100% + 1px);
+      border-radius: 2px;
+      min-width: 100%;
+      left: 0;
+      background-color: $orangeColor;
+      border-top: 0;
+      border-top: 0;
+      padding: 10px 0px 5px 0px;
+      @media (max-width: $tablet) {
+         padding: 5px 0px 5px 0px;
+      }
+   }
+   // .select__scroll
+   &__scroll {
+      overflow-y: auto;
+      overflow-x: hidden;
+      // Максимальна висота
+      max-height: 200px;
+      // Стилі скроллбару
+      .simplebar-scrollbar {
+         &::before {
+            //opacity: 1;
+         }
+      }
+   }
+   // .select__option
+   &__option {
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      padding: 5px 15px;
+      color: #fff;
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+         padding: 5px 12px;
+         padding-right: rem(5);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(12);
+      }
+      &._select-selected {
+         background-color: #eee;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background: #ed652b;
+         }
+      }
+   }
 
-	// Конструкція додаткових даних
-	&__row {
-		display: inline-flex;
-		align-items: center;
-	}
-	&__asset {
-	}
-	&__text {
-	}
+   // Конструкція додаткових даних
+   &__row {
+      display: inline-flex;
+      align-items: center;
+   }
+   &__asset {
+   }
+   &__text {
+   }
 
-	// Стан селекту
-	&._select-open {
-		z-index: 5;
-	}
-	&._select-disabled {
-	}
-	&._select-active {
-	}
-	&._select-focus {
-	}
-	&._select-multiple {
-	}
-	&._select-checkbox {
-	}
+   // Стан селекту
+   &._select-open {
+      z-index: 5;
+   }
+   &._select-disabled {
+   }
+   &._select-active {
+   }
+   &._select-focus {
+   }
+   &._select-multiple {
+   }
+   &._select-checkbox {
+   }
 }
 
 // Тег
 ._select-tag {
-	cursor: pointer;
+   cursor: pointer;
 }

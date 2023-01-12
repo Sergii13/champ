@@ -1,0 +1,269 @@
+.news-open {
+   background-color: #024a5c;
+   padding: rem(22) 0;
+   @media (max-width: $tablet) {
+      padding: rem(15) 0;
+   }
+   @media (max-width: $mobile) {
+      padding: rem(19) 0;
+   }
+   // .news-open__head
+   &__head {
+   }
+   // .news-open__container
+   &__container {
+   }
+   &__breadcrumbs {
+   }
+}
+
+.article {
+   padding: rem(40) 0 rem(124);
+   @media (max-width: $pc) {
+      padding: rem(30) 0 rem(45);
+   }
+   @media (max-width: $mobile) {
+      padding-top: rem(35);
+   }
+   // .article__container
+   &__container {
+   }
+   // .article__big-image
+   &__big-image {
+      display: flex;
+      justify-content: center;
+      &:not(:last-child) {
+         margin-bottom: rem(50);
+         @media (max-width: $pc) {
+            margin-bottom: rem(35);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(15);
+         }
+      }
+   }
+   // .article__content
+   &__content {
+      max-width: rem(760);
+      margin: 0 auto;
+      @media (max-width: $tablet) {
+         max-width: rem(470);
+      }
+      a {
+         color: #2f80ed;
+         text-decoration: underline;
+         &:hover {
+            color: $orangeColor;
+         }
+      }
+      p,
+      ul {
+         color: #5b5b5b;
+         line-height: 1.556;
+         font-size: 18px;
+         font-family: "MyriadPro";
+         letter-spacing: 0.005em;
+         @media (max-width: $tablet) {
+            font-size: rem(13);
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(15);
+            @media (max-width: $tablet) {
+               margin-bottom: rem(10);
+            }
+            @media (max-width: $mobile) {
+               margin-bottom: rem(15);
+            }
+         }
+      }
+      h4 {
+         margin: rem(60) 0 rem(25);
+         font-weight: 500;
+         font-size: rem(24);
+         line-height: math.div(35, 24);
+         @media (max-width: $tablet) {
+            font-size: rem(18);
+            margin: rem(30) 0 rem(15);
+         }
+         @media (max-width: $mobile) {
+            font-size: rem(16);
+         }
+      }
+   }
+   &__image-title {
+      font-size: rem(16);
+      font-family: "MyriadPro";
+      color: #5b5b5b;
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+   }
+   // .article__date
+   &__date {
+      font-size: rem(18);
+      font-family: "MyriadPro";
+      color: #5b5b5b;
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(35);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(20);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+         }
+      }
+   }
+   // .article__title
+   &__title {
+      text-transform: none;
+      @media (max-width: $mobile) {
+         font-size: rem(25);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(45);
+         @media (max-width: $pc) {
+            margin-bottom: rem(20);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(14);
+         }
+      }
+   }
+   // .article__list
+   &__list {
+      display: grid;
+      gap: rem(20);
+      counter-reset: list;
+      li {
+         gap: rem(10);
+         display: flex;
+         counter-increment: section;
+         &::before {
+            display: inline-block;
+            content: "0" counter(section) " /";
+            font-weight: 700;
+            font-size: rem(18);
+            color: #48acce;
+            flex-shrink: 0;
+            letter-spacing: 0.005em;
+            @media (max-width: $tablet) {
+               font-size: rem(13);
+            }
+         }
+      }
+   }
+   // .article__image-small
+   &__image-small {
+      img {
+         display: block;
+         margin: rem(40) 0 rem(25);
+         @media (max-width: $tablet) {
+            margin: rem(30) 0 rem(15);
+         }
+      }
+   }
+   // .article__list2
+   &__list2 {
+      padding-left: rem(17);
+      @media (max-width: $tablet) {
+         padding-left: rem(14);
+      }
+      @media (max-width: $mobileSmall) {
+         padding-left: 0;
+      }
+      li {
+         display: flex;
+         gap: rem(17);
+         @media (max-width: $tablet) {
+            gap: rem(11);
+         }
+
+         &::before {
+            content: "";
+            display: inline-block;
+            background: #48acce;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            top: 8px;
+            position: relative;
+            @media (max-width: $tablet) {
+               width: 4px;
+               height: 4px;
+               top: 6px;
+            }
+         }
+      }
+   }
+   // .article__bottom
+   &__bottom {
+      margin-top: rem(70);
+      border-top: 1px solid #eeeeee;
+      padding-top: rem(37);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(20);
+      flex-wrap: wrap;
+      @media (max-width: $pc) {
+         margin-top: rem(40);
+         padding-top: rem(25);
+      }
+      @media (max-width: $tablet) {
+         padding-top: rem(15);
+      }
+      p {
+         font-weight: 500;
+         font-size: 18px;
+         font-family: "Oswald";
+         color: #282828;
+         text-transform: uppercase;
+         &:not(:last-child) {
+            margin-bottom: rem(0);
+         }
+         @media (max-width: $tablet) {
+            font-size: rem(13);
+         }
+      }
+   }
+   // .article__socials
+   &__socials {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      @media (max-width: $mobileSmall) {
+         gap: rem(7);
+      }
+   }
+   // .article__link-social
+   &__link-social {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background: #e0e3e4;
+      border-radius: 50%;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      padding: 7px;
+      img {
+         max-height: 100%;
+      }
+      @media (max-width: $tablet) {
+         width: 33px;
+         height: 33px;
+      }
+      @media (max-width: $mobileSmall) {
+         width: 25px;
+         height: 25px;
+      }
+      &:hover {
+         background: #ececec;
+      }
+   }
+}

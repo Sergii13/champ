@@ -104,6 +104,79 @@ function initSliders() {
          }
       });
    }
+   if (document.querySelector('.news-latest2__slider')) { // Вказуємо склас потрібного слайдера
+      // Створюємо слайдер
+      new Swiper('.news-latest2__slider', { // Вказуємо склас потрібного слайдера
+         // Підключаємо модулі слайдера
+         // для конкретного випадку
+         modules: [Pagination],
+         observer: true,
+         observeParents: true,
+         slidesPerView: 3,
+         spaceBetween: 30,
+         speed: 800,
+         loop: true,
+         //touchRatio: 0,
+         //simulateTouch: false,
+         //loop: true,
+         //preloadImages: false,
+         //lazy: true,
+
+         /*
+         // Ефекти
+         effect: 'fade',
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+         },
+         */
+
+         // Пагінація
+
+         pagination: {
+            el: '.news-latest2__pagination',
+            clickable: true,
+         },
+
+
+         // Скроллбар
+         /*
+         scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+         },
+         */
+
+         // Кнопки "вліво/вправо"
+
+
+         // Брейкпоінти
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+               spaceBetween: 15,
+            },
+            550: {
+               slidesPerView: 2,
+               spaceBetween: 15,
+            },
+            768: {
+               slidesPerView: 3,
+               spaceBetween: 15,
+            },
+            992: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+
+         },
+
+         // Події
+         on: {
+
+         }
+      });
+   }
    if (document.querySelector('.main-block__slider')) { // Вказуємо склас потрібного слайдера
       // Створюємо слайдер
       new Swiper('.main-block__slider', { // Вказуємо склас потрібного слайдера
@@ -385,7 +458,6 @@ const breakpointChecker = function () {
          disableSwiper(mySwiper);
       }
       if (mySwiperPc !== undefined) {
-         console.log(mySwiperPc);
          enableSwiperPc();
       }
       // or/and do nothing
@@ -480,7 +552,8 @@ const enableSwiperPc = () => {
 
          }
       });
-   } if (document.querySelector('.players__slider.two')) { // Вказуємо склас потрібного слайдера
+   }
+   if (document.querySelector('.players__slider.two')) { // Вказуємо склас потрібного слайдера
       // Створюємо слайдер
       mySwiperPc[1] = new Swiper('.players__slider.two', { // Вказуємо склас потрібного слайдера
          // Підключаємо модулі слайдера
@@ -541,6 +614,74 @@ const enableSwiperPc = () => {
             },
             650: {
                slidesPerView: 4,
+               spaceBetween: 15,
+            },
+
+         },
+
+         // Події
+         on: {
+
+         }
+      });
+   }
+   if (document.querySelector('.news-latest__slider')) { // Вказуємо склас потрібного слайдера
+      // Створюємо слайдер
+      mySwiperPc[2] = new Swiper('.news-latest__slider', { // Вказуємо склас потрібного слайдера
+         // Підключаємо модулі слайдера
+         // для конкретного випадку
+         modules: [Pagination],
+         observer: true,
+         observeParents: true,
+         slidesPerView: 2,
+         spaceBetween: 15,
+         speed: 800,
+         loop: true,
+         //touchRatio: 0,
+         //simulateTouch: false,
+         //loop: true,
+         //preloadImages: false,
+         //lazy: true,
+
+         /*
+         // Ефекти
+         effect: 'fade',
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+         },
+         */
+
+         // Пагінація
+
+         pagination: {
+            el: '.news-latest__pagination',
+            clickable: true,
+         },
+
+
+         // Скроллбар
+         /*
+         scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+         },
+         */
+
+         // Кнопки "вліво/вправо"
+         // navigation: {
+         //    prevEl: '.swiper-button-prev',
+         //    nextEl: '.swiper-button-next',
+         // },
+
+         // Брейкпоінти
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+               spaceBetween: 15,
+            },
+            500: {
+               slidesPerView: 2,
                spaceBetween: 15,
             },
 

@@ -1,0 +1,193 @@
+.top-news {
+   padding: rem(75) 0 rem(57);
+   @media (max-width: $mobile) {
+      padding: rem(40) 0 rem(27);
+   }
+   @media (max-width: $mobile) {
+      padding: rem(30) 0 rem(23);
+   }
+   // .top-news__container
+   &__container {
+   }
+   // .top-news__head
+   &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(17);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+         }
+      }
+   }
+   // .top-news__title
+   &__title {
+   }
+   // .top-news__grid-layout
+   &__grid-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(30);
+      @media (max-width: $tablet) {
+         gap: rem(15);
+      }
+      @media (max-width: em(650)) {
+         gap: rem(20);
+      }
+   }
+   // .top-news__card
+   &__card {
+   }
+}
+
+.card-top {
+   width: calc(50% - 15px);
+   position: relative;
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-start;
+   min-height: rem(400);
+   border-radius: 2px;
+   overflow: hidden;
+   @media (max-width: $pc) {
+      min-height: rem(300);
+   }
+   @media (max-width: $tablet) {
+      min-height: rem(245);
+   }
+   @media (max-width: em(650)) {
+      min-height: rem(207);
+      width: 100%;
+   }
+   &:nth-child(1) {
+      width: calc(66% - 15px);
+      @media (max-width: em(650)) {
+         width: 100%;
+      }
+   }
+   &:nth-child(2) {
+      width: calc(34% - 15px);
+      @media (max-width: em(650)) {
+         width: 100%;
+      }
+   }
+   &:nth-child(1),
+   &:nth-child(2) {
+      min-height: rem(538);
+      @media (max-width: $pc) {
+         min-height: rem(400);
+      }
+      @media (max-width: $tablet) {
+         min-height: rem(351);
+      }
+      @media (max-width: em(650)) {
+         min-height: rem(207);
+      }
+   }
+
+   @media (any-hover: hover) {
+      &:hover {
+         .card-top__image-ibg img {
+            opacity: 0.8;
+         }
+      }
+   }
+   // .card-top__image-ibg
+   &__image-ibg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      img {
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      }
+      &::after {
+         content: "";
+         background-image: linear-gradient(0deg, #000000 0%, #00000000 100%);
+         opacity: 0.902;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: rem(368);
+         width: 100%;
+         @media (max-width: $tablet) {
+            height: rem(245);
+         }
+         @media (max-width: em(650)) {
+            min-height: rem(141);
+         }
+      }
+   }
+   // .card-top__content
+   &__content {
+      position: relative;
+      z-index: 2;
+      padding: rem(35);
+      color: #fff;
+      @media (max-width: $tablet) {
+         padding: rem(25);
+      }
+      @media (max-width: em(650)) {
+         padding: 15px;
+      }
+   }
+   // .card-top__date
+   &__date {
+      font-size: rem(16);
+      font-family: "MyriadPro";
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(15);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(13);
+         }
+      }
+   }
+   // .card-top__title
+   &__title {
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: math.div(30, 20);
+      @media (max-width: $tablet) {
+         font-size: rem(16);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $orangeColor;
+         }
+      }
+   }
+   // .card-top__label
+   &__label {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 2;
+      font-size: rem(18);
+      @media (max-width: $tablet) {
+         top: 25px;
+         left: 25px;
+         font-size: rem(13);
+      }
+      @media (max-width: em(650)) {
+         top: 20px;
+         left: 15px;
+      }
+      &.orange {
+         color: #ff7c44;
+      }
+      &.blue {
+         color: #48acce;
+      }
+   }
+}

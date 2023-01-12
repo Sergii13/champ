@@ -1,0 +1,150 @@
+.block {
+   background: #024a5c;
+
+   // .block__container
+   &__container {
+      position: relative;
+   }
+   // .block__decor
+   &__decor {
+      position: absolute;
+      transform: skewX(-25deg);
+      // .block__decor_1
+      &_1 {
+         height: 38px;
+         width: 138px;
+         background: $orangeColor;
+         left: -3%;
+         bottom: 35%;
+         z-index: 2;
+         @media (max-width: em(1200)) {
+            height: 20px;
+            width: rem(74);
+            bottom: 44%;
+            left: 10%;
+         }
+
+         @media (max-width: $mobileSmall) {
+            width: 80px;
+            left: 79px;
+            bottom: 0;
+         }
+      }
+      // .block__decor_2
+      &_2 {
+         height: 72px;
+         width: 200px;
+         bottom: 0;
+         left: -6%;
+         background: #014f61;
+         @media (max-width: em(1200)) {
+            width: 102px;
+            height: 54px;
+            left: 7%;
+         }
+         @media (max-width: $mobileSmall) {
+            display: none;
+         }
+      }
+      // .block__decor_3
+      &_3 {
+         width: 200px;
+         height: 100%;
+         left: 18%;
+         background: #014f61;
+         bottom: 0;
+         @media (max-width: em(1200)) {
+            height: 100%;
+            width: 140px;
+            left: 26%;
+         }
+         @media (max-width: $mobileSmall) {
+            left: 160px;
+         }
+      }
+      // .block__decor_4
+      &_4 {
+         height: 38px;
+         width: 138px;
+         background: $orangeColor;
+         bottom: 0;
+         left: 53%;
+         z-index: 2;
+         @media (max-width: em(1200)) {
+            height: 20px;
+            width: rem(74);
+            left: 54%;
+         }
+         @media (max-width: $mobileSmall) {
+            height: 100px;
+            bottom: auto;
+            top: 0;
+            width: 104px;
+            right: -60px;
+            left: auto;
+         }
+      }
+      // .block__decor_5
+      &_5 {
+         height: 181px;
+         width: 200px;
+         bottom: 0;
+         left: 62%;
+         background: #014f61;
+         @media (max-width: em(1200)) {
+            width: 131px;
+            height: 81px;
+            left: 60%;
+         }
+         @media (max-width: $mobileSmall) {
+            display: none;
+         }
+      }
+      // .block__decor_6
+      &_6 {
+         height: 181px;
+         width: 200px;
+         top: 0;
+         right: -5%;
+         background: #014f61;
+         @media (max-width: em(1200)) {
+            width: 131px;
+            height: 85px;
+            top: 23px;
+            right: auto;
+            left: 80%;
+         }
+         @media (max-width: $mobileSmall) {
+            display: none;
+         }
+      }
+   }
+   // .block__content
+   &__content {
+      padding: rem(45) 0 rem(96);
+      position: relative;
+      z-index: 2;
+      @media (max-width: rem(1200)) {
+         padding: rem(21) 0 rem(46);
+      }
+      @media (max-width: $mobile) {
+         padding: rem(20) 0;
+         min-height: rem(181);
+      }
+   }
+   // .block__breadcrumbs
+   &__breadcrumbs {
+      &:not(:last-child) {
+         margin-bottom: rem(42);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(17);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(25);
+         }
+      }
+   }
+   // .block__title
+   &__title {
+   }
+}

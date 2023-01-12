@@ -1,0 +1,98 @@
+.hotel {
+   background: url("@img/hotel/bg.png") 0 0 / cover no-repeat;
+   padding: rem(70) 0 rem(115);
+   @media (max-width: $pc) {
+      padding: rem(40) 0 rem(44);
+   }
+   // .hotel__container
+   &__container {
+   }
+   // .hotel__title
+   &__title {
+      color: #131313;
+      @media (max-width: $mobile) {
+         font-size: rem(25);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(45);
+         @media (max-width: $pc) {
+            margin-bottom: rem(25);
+         }
+      }
+   }
+   // .hotel__head-row
+   &__head-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(30);
+      @media (max-width: em(600)) {
+         gap: rem(20);
+         grid-template-columns: repeat(1, 1fr);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(45);
+         @media (max-width: $pc) {
+            margin-bottom: rem(36);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+         }
+      }
+   }
+   // .hotel__column
+   &__column {
+      font-size: rem(18);
+      line-height: math.div(27, 18);
+      font-family: "MyriadPro";
+      color: #5b5b5b;
+      letter-spacing: 0.005em;
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+   }
+   // .hotel__slider-wrap
+   &__slider-wrap {
+      .gallery__image-ibg.one {
+         padding-bottom: percent(475, 1140);
+         @media (max-width: $pc) {
+            padding-bottom: percent(375, 1140);
+         }
+         @media (max-width: $tablet) {
+            padding-bottom: percent(296, 721);
+         }
+         @media (max-width: $mobileSmall) {
+            padding-bottom: percent(206, 317);
+         }
+      }
+      .gallery__image-ibg {
+         padding-bottom: percent(315, 554);
+         @media (max-width: $pc) {
+            padding-bottom: percent(245, 554);
+         }
+         @media (max-width: $tablet) {
+            padding-bottom: percent(201, 353);
+         }
+         @media (max-width: $mobileSmall) {
+            padding-bottom: percent(201, 353);
+            &:not(:first-child) {
+               display: none;
+            }
+         }
+      }
+   }
+   // .hotel__button-wrap
+   &__button-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: rem(60);
+      @media (max-width: $pc) {
+         margin-top: rem(30);
+      }
+      @media (max-width: $mobile) {
+         margin-top: rem(22);
+      }
+   }
+   // .hotel__button
+   &__button {
+   }
+}
