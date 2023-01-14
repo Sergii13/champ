@@ -162,12 +162,9 @@
    ul {
       display: flex;
       li {
-         font-size: 18px;
+         font-size: 20px;
          @media (max-width: $tablet) {
-            font-size: rem(13);
-         }
-         @media (max-width: $mobile) {
-            font-size: rem(12);
+            font-size: rem(16);
          }
          &:not(:last-child) {
             &::after {

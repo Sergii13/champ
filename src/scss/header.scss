@@ -298,7 +298,7 @@
             }
             &::after {
                content: "";
-               top: 100%;
+               top: calc(100% + 3px);
                transform: translate(0);
                left: 0;
             }

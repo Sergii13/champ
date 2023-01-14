@@ -1,6 +1,124 @@
 .block {
    background: #024a5c;
-
+   &_sponsors {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            left: 18%;
+            bottom: auto;
+            top: 0;
+         }
+         .block__decor_2 {
+            left: 3%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            left: 44%;
+         }
+      }
+   }
+   &_hotel {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            left: 7%;
+         }
+         .block__decor_2 {
+            left: 3%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            left: 68%;
+         }
+         .block__decor_5 {
+            left: 60%;
+         }
+         .block__decor_6 {
+            left: 86%;
+         }
+      }
+   }
+   &_past {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            bottom: 0;
+            left: 17%;
+         }
+         .block__decor_2 {
+            left: 3%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            top: 0;
+            left: 77%;
+            bottom: auto;
+         }
+         .block__decor_5 {
+            left: 60%;
+            height: 100%;
+         }
+         .block__decor_6 {
+            left: 78%;
+            top: auto;
+            bottom: 0;
+         }
+      }
+   }
+   &_list {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            bottom: 205px;
+            left: 14%;
+         }
+         .block__decor_2 {
+            left: 0%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            left: 43%;
+         }
+         .block__decor_5 {
+            left: 60%;
+         }
+         .block__decor_6 {
+            left: 85%;
+         }
+      }
+   }
+   &_contact {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            left: 19%;
+            bottom: 0;
+         }
+         .block__decor_2 {
+            left: 3%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            bottom: auto;
+            top: 20px;
+            left: 60%;
+         }
+         .block__decor_5 {
+            left: 60%;
+            height: 100%;
+         }
+         .block__decor_6 {
+            left: 78%;
+            top: auto;
+            bottom: 0;
+         }
+      }
+   }
    // .block__container
    &__container {
       position: relative;
