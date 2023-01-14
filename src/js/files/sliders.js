@@ -104,6 +104,76 @@ function initSliders() {
          }
       });
    }
+   if (document.querySelector('.about2__slider')) { // Вказуємо склас потрібного слайдера
+      // Створюємо слайдер
+      new Swiper('.about2__slider', { // Вказуємо склас потрібного слайдера
+         // Підключаємо модулі слайдера
+         // для конкретного випадку
+         modules: [Pagination],
+         observer: true,
+         observeParents: true,
+         slidesPerView: 'auto',
+         spaceBetween: 30,
+         speed: 800,
+         loop: true,
+         //touchRatio: 0,
+         //simulateTouch: false,
+         //loop: true,
+         //preloadImages: false,
+         //lazy: true,
+
+         /*
+         // Ефекти
+         effect: 'fade',
+         autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+         },
+         */
+
+         // Пагінація
+
+         pagination: {
+            el: '.about2__pagination',
+            clickable: true,
+         },
+
+
+         // Скроллбар
+         /*
+         scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+         },
+         */
+
+         // Кнопки "вліво/вправо"
+
+
+         // Брейкпоінти
+         breakpoints: {
+            320: {
+               slidesPerView: 1,
+               spaceBetween: 20,
+            },
+            726: {
+               slidesPerView: 'auto',
+
+               spaceBetween: 20,
+            },
+            992: {
+
+               spaceBetween: 30,
+            },
+
+         },
+
+         // Події
+         on: {
+
+         }
+      });
+   }
    if (document.querySelector('.news-latest2__slider')) { // Вказуємо склас потрібного слайдера
       // Створюємо слайдер
       new Swiper('.news-latest2__slider', { // Вказуємо склас потрібного слайдера

@@ -1,0 +1,212 @@
+.players2 {
+   padding: rem(80) 0 rem(115);
+   @media (max-width: $pc) {
+      padding: rem(40) 0 rem(45);
+   }
+   // .players2__container
+   &__container {
+   }
+   // .players2__head
+   &__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(20);
+      &:not(:last-child) {
+         margin-bottom: rem(57);
+         @media (max-width: $pc) {
+            margin-bottom: rem(40);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(16);
+         }
+      }
+      .select {
+         min-width: rem(105);
+         @media (max-width: $mobileSmall) {
+            min-width: rem(75);
+         }
+      }
+   }
+   // .players2__table
+   &__table {
+   }
+}
+
+.table {
+   font-size: 18px;
+   @media (max-width: $tablet) {
+      font-size: rem(14);
+   }
+   @media (max-width: em(600)) {
+      font-size: rem(13);
+   }
+   // .table__seed
+   &__seed {
+   }
+   // .table__player
+   &__player {
+      display: flex;
+      align-items: center;
+      gap: rem(25);
+      @media (max-width: $tablet) {
+         gap: rem(14);
+      }
+      @media (max-width: em(600)) {
+         flex-direction: column-reverse;
+         align-items: flex-start;
+      }
+   }
+   // .table__avatars
+   &__avatars {
+      @media (max-width: em(600)) {
+         display: flex;
+         align-items: center;
+         gap: rem(6);
+      }
+   }
+   // .table__avatar-ibg
+   &__avatar-ibg {
+      width: 65px;
+      height: 65px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      background: $orangeColor;
+      &.woman {
+         background-color: #48acce;
+      }
+      @media (max-width: $tablet) {
+         width: 55px;
+         height: 55px;
+      }
+      @media (max-width: em(600)) {
+         width: 40px;
+         height: 40px;
+      }
+      img {
+         width: auto;
+         height: auto;
+         top: auto;
+         bottom: 0;
+      }
+   }
+   // .table__country-mob
+   &__country-mob {
+      @media (min-width: em(600)) {
+         display: none;
+      }
+      .icon-flag {
+         width: 14px;
+         height: 14px;
+      }
+   }
+   // .table__name
+   &__name {
+      font-weight: 500;
+      @media (max-width: em(600)) {
+         padding-right: 22px;
+         background: url("@img/svg/star.svg") center right / 10px 10px no-repeat;
+      }
+   }
+   // .table__country
+   &__country {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(16);
+      color: #5b5b5b;
+
+      @media (max-width: $tablet) {
+         gap: rem(11);
+         font-size: rem(16);
+      }
+      font-family: "MyriadPro";
+      .icon-flag {
+         width: 30px;
+         height: 30px;
+         @media (max-width: $tablet) {
+            width: 21px;
+            height: 21px;
+         }
+      }
+   }
+   // .table__rating
+   &__rating {
+      position: relative;
+      @media (max-width: $mobile) {
+         font-size: rem(16);
+      }
+      &::after {
+         content: "";
+         position: absolute;
+         width: 80px;
+         height: 200px;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%) skewX(-20deg);
+         background: #f3f3f3;
+         @media (max-width: $tablet) {
+            width: 60px;
+         }
+      }
+      span {
+         position: relative;
+         z-index: 2;
+      }
+   }
+   table {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 12px;
+      @media (max-width: $tablet) {
+         border-spacing: 0 10px;
+      }
+   }
+
+   table tbody {
+      td {
+         padding: 28px;
+         overflow: hidden;
+         @media (max-width: $tablet) {
+            padding: 20px rem(10);
+         }
+         @media (max-width: em(600)) {
+            padding: rem(15) rem(10);
+         }
+      }
+      tr {
+         background: #f9f9f9;
+         &:not(:last-child) {
+            margin-bottom: rem(12);
+         }
+      }
+   }
+   table th,
+   table td {
+      text-align: center;
+      @media (max-width: em(600)) {
+         &:not(:last-child) {
+            text-align: left;
+         }
+         &:nth-child(3) {
+            display: none;
+         }
+      }
+   }
+
+   table th {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #191919;
+      padding-bottom: rem(25);
+      letter-spacing: 0.0025em;
+
+      @media (max-width: em(600)) {
+         letter-spacing: 0.006em;
+         padding: 0 rem(10);
+         padding-bottom: rem(20);
+      }
+   }
+}

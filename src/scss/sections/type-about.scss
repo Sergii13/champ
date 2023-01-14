@@ -1,0 +1,184 @@
+.type-about {
+   display: flex;
+   background: #f7f6f6;
+   @media (max-width: $tablet) {
+      flex-direction: column;
+   }
+   &.reverse {
+      flex-direction: row-reverse;
+      background: #fff;
+      @media (max-width: $tablet) {
+         @media (max-width: $tablet) {
+            flex-direction: column;
+         }
+      }
+      .type-about__decor-image {
+         opacity: 1;
+         left: 74px;
+         right: auto;
+         @media (max-width: $pc) {
+            left: 10px;
+         }
+         @media (max-width: $tablet) {
+            left: auto;
+            right: 30px;
+         }
+      }
+      .type-about__wrapper {
+         justify-content: flex-end;
+         @media (max-width: em(1300)) {
+            padding-left: rem(70);
+            padding-right: rem(50);
+         }
+         @media (max-width: $tablet) {
+            padding: rem(40) rem(50);
+            justify-content: flex-start;
+         }
+         @media (max-width: $mobileSmall) {
+            padding: rem(25) rem(15) rem(45) rem(15);
+         }
+      }
+      .type-about__decor-text {
+         right: auto;
+         left: 116px;
+         @media (max-width: $pc) {
+            left: 40px;
+         }
+         @media (max-width: em(1300)) {
+            left: 10px;
+         }
+         @media (max-width: $tablet) {
+            left: auto;
+            right: 70px;
+         }
+      }
+   }
+   // .type-about__image-ibg
+   &__image-ibg {
+      flex: 0 0 percent(840, 1920);
+      @media (max-width: $tablet) {
+         flex: 0 0 100%;
+         padding-bottom: percent(348, 751);
+      }
+      @media (max-width: $mobileSmall) {
+         padding-bottom: percent(272, 320);
+      }
+   }
+   // .type-about__decor-image
+   &__decor-image {
+      position: absolute;
+      bottom: 0;
+      right: 65px;
+      opacity: 0.2;
+      @media (max-width: $pc) {
+         right: 20px;
+      }
+      @media (max-width: $tablet) {
+         max-width: rem(125);
+      }
+      @media (max-width: em(600)) {
+         display: none;
+      }
+   }
+   // .type-about__wrapper
+   &__wrapper {
+      padding: rem(103) rem(135) rem(113) rem(135);
+      max-width: rem(1082);
+      position: relative;
+      width: 100%;
+      display: flex;
+      @media (max-width: $pc) {
+         padding: rem(40) rem(50);
+      }
+      @media (max-width: em(1300)) {
+         padding-right: rem(70);
+      }
+      @media (max-width: $tablet) {
+         padding: rem(40) rem(50);
+      }
+      @media (max-width: $mobileSmall) {
+         padding: rem(25) rem(15) rem(45) rem(15);
+      }
+   }
+   // .type-about__decor-text
+   &__decor-text {
+      position: absolute;
+      opacity: 0.07;
+      color: #636363;
+      font-size: 99px;
+      font-weight: 500;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      top: 92px;
+      right: 116px;
+      @media (max-width: $pc) {
+         font-size: rem(60);
+         top: 40px;
+         right: 70px;
+      }
+      @media (max-width: em(1300)) {
+         right: 20px;
+      }
+      @media (max-width: $tablet) {
+         font-size: rem(50);
+         right: 70px;
+      }
+      @media (max-width: em(600)) {
+         display: none;
+      }
+   }
+   // .type-about__content
+   &__content {
+      position: relative;
+      z-index: 2;
+      max-width: rem(565);
+      @media (max-width: $tablet) {
+         max-width: rem(470);
+      }
+   }
+   // .type-about__title
+   &__title {
+      color: #131313;
+      &:not(:last-child) {
+         margin-bottom: rem(46);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(25);
+         }
+      }
+   }
+   // .type-about__list
+   &__list {
+      display: grid;
+      gap: rem(15);
+      font-family: "MyriadPro";
+      counter-reset: list;
+      color: #5b5b5b;
+      font-size: rem(18);
+      line-height: math.div(28, 18);
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+      @media (max-width: $mobile) {
+         gap: rem(10);
+      }
+      li {
+         gap: rem(10);
+         display: flex;
+         counter-increment: section;
+         &::before {
+            display: inline-block;
+            content: "0" counter(section) " /";
+            font-weight: 700;
+            font-size: inherit;
+            color: #48acce;
+            flex-shrink: 0;
+            letter-spacing: 0.005em;
+            @media (max-width: $tablet) {
+               font-size: rem(13);
+            }
+         }
+      }
+   }
+}

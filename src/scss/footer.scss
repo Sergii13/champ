@@ -113,6 +113,7 @@
    // .footer__column
    &__column {
       max-width: rem(331);
+      font-family: "MyriadPro";
       @media (max-width: $tablet) {
          max-width: rem(270);
       }
@@ -164,9 +165,10 @@
    }
    // .footer__copy
    &__copy {
+      color: #96c6d6;
+      font-family: "MyriadPro";
       @media (max-width: $tablet) {
          font-size: 11px;
-         color: #96c6d6;
       }
       @media (max-width: $mobile) {
          font-size: rem(13);
