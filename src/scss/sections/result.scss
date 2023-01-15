@@ -143,6 +143,7 @@
    }
    @media (max-width: $mobile) {
       padding: rem(15);
+      gap: rem(10);
    }
    &.big {
       .result-item__count-all {
@@ -246,6 +247,8 @@
       display: flex;
       align-items: center;
       gap: rem(16);
+      width: 30%;
+      flex-shrink: 0;
       @media (max-width: $tablet) {
          gap: rem(13);
       }
@@ -328,7 +331,7 @@
       font-size: rem(19);
       font-weight: 500;
       padding-right: rem(28);
-
+      max-width: 100%;
       @media (max-width: $tablet) {
          font-size: rem(15);
          padding-right: 23px;
@@ -339,7 +342,6 @@
          position: absolute;
          bottom: calc(100% - 15px);
          left: 0;
-         max-width: 40vw;
          white-space: nowrap;
          overflow: hidden;
          text-overflow: ellipsis;
@@ -357,7 +359,35 @@
          }
       }
    }
-
+   &__date-future {
+      font-size: rem(18);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #4c4c4c;
+      text-align: center;
+      @media (max-width: $tablet) {
+         font-size: rem(15);
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(13);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(13);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(5);
+         }
+      }
+   }
+   &__count-round {
+      font-family: "myriadPro";
+      color: #5b5b5b;
+      @media (max-width: $tablet) {
+         font-size: rem(13);
+      }
+   }
    // .result-item__country
    &__country {
       display: inline-flex;

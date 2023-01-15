@@ -91,6 +91,54 @@
          }
       }
    }
+   &_shedule {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            bottom: 105px;
+            left: 8%;
+         }
+         .block__decor_2 {
+            left: 0%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            left: 43%;
+         }
+         .block__decor_5 {
+            left: 60%;
+         }
+         .block__decor_6 {
+            left: 85%;
+         }
+      }
+   }
+   &_daily {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            left: 11%;
+            bottom: 70px;
+         }
+         .block__decor_2 {
+            left: -10%;
+            height: 112px;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            left: 57%;
+         }
+         .block__decor_5 {
+            left: 75%;
+            height: 215px;
+         }
+         .block__decor_6 {
+            display: none;
+         }
+      }
+   }
    &_contact {
       @media (min-width: $tablet) {
          .block__decor_1 {

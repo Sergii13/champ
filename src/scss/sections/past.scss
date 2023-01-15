@@ -39,6 +39,11 @@
       .past-item__row:nth-child(odd) {
          background: rgba(72, 172, 206, 0.08);
       }
+      .past-item__who {
+         .pending {
+            background: #48acce;
+         }
+      }
    }
    // .past-item__head
    &__head {

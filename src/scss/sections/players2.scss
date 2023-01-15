@@ -190,6 +190,9 @@
          &:not(:last-child) {
             text-align: left;
          }
+         &:nth-child(1) {
+            text-align: center;
+         }
          &:nth-child(3) {
             display: none;
          }

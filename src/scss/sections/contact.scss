@@ -26,6 +26,7 @@
    }
 }
 .item-contact {
+   background: #ecf7fa;
    &.mob {
       @media (min-width: $mobileSmall) {
          display: none;
@@ -95,7 +96,6 @@
    }
    // .item-contact__body
    &__body {
-      background: #ecf7fa;
       padding: 30px;
       @media (max-width: $tablet) {
          padding: 20px;
@@ -135,7 +135,7 @@
             color: #5b5b5b;
             @media (max-width: $tablet) {
                font-size: rem(13);
-               gap: rem(11);
+               gap: rem(10);
             }
             &:hover {
                color: #48acce;
@@ -195,7 +195,7 @@
    }
    // .item-contact__text-small
    &__text-small {
-      font-size: rem(13);
+      font-size: rem(15);
       color: #5b5b5b;
       line-height: 1.2;
       @media (max-width: $tablet) {
@@ -226,6 +226,12 @@
                a {
                   gap: rem(5);
                }
+            }
+            li:not(:first-child) {
+               a {
+                  gap: rem(13);
+               }
+               padding-left: rem(8);
             }
          }
       }
