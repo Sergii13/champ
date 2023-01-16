@@ -4,6 +4,42 @@ import { isMobile, removeClasses } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 window.addEventListener('load', () => {
+   const updateList = (arr, index, count, bodyEl) => {
+      bodyEl.innerHTML = '';
+      for (let i = index; i < index + count; i++) {
+         if (arr[i]) {
+            bodyEl.appendChild(arr[i]);
+         }
+      }
+   }
+   const allButtons = document.querySelectorAll('.draws__nav-button'
+   );
+   let countToVisible = 3;
+   let indexButton = 0;
+
+   const breakpointTablet = window.matchMedia('(max-width:1150px)');
+   const breakpointMobile = window.matchMedia('(max-width:767px)');
+   if (breakpointTablet.matches == true) {
+      countToVisible = 2;
+   }
+   if (breakpointMobile.matches == true) {
+      countToVisible = 1;
+   }
+
+   if (allButtons.length > 0) {
+      const allDrawsColumn = document.querySelectorAll('.draws__column');
+      const bodyColumn = document.querySelector('.draws__row');
+      updateList(allDrawsColumn, indexButton, countToVisible, bodyColumn);
+      allButtons.forEach((button, index) => {
+         button.addEventListener('click', () => {
+            removeClasses(allButtons, 'active')
+            button.classList.add('active');
+            indexButton = index;
+            updateList(allDrawsColumn, indexButton, countToVisible, bodyColumn);
+         })
+      });
+   }
+
    const mq = window.matchMedia("(max-width: 768px)");
 
    if (!mq.matches) {
@@ -90,45 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-const updateList = (arr, index, count, bodyEl) => {
-   bodyEl.innerHTML = '';
-   for (let i = index; i < index + count; i++) {
-      if (arr[i]) {
-         bodyEl.appendChild(arr[i]);
-      }
-   }
 
-}
 
-const allDrawsColumn = document.querySelectorAll('.draws__column');
-const allButtons = document.querySelectorAll('.draws__nav-button'
-);
-const bodyColumn = document.querySelector('.draws__row');
 
-let countToVisible = 3;
-let indexButton = 0;
-
-const breakpointTablet = window.matchMedia('(max-width:1150px)');
-const breakpointMobile = window.matchMedia('(max-width:767px)');
-console.log(breakpointTablet)
-if (breakpointTablet.matches == true) {
-   countToVisible = 2;
-}
-if (breakpointMobile.matches == true) {
-   countToVisible = 1;
-}
-
-if (allButtons.length > 0) {
-   updateList(allDrawsColumn, indexButton, countToVisible, bodyColumn);
-   allButtons.forEach((button, index) => {
-      button.addEventListener('click', () => {
-         removeClasses(allButtons, 'active')
-         button.classList.add('active');
-         indexButton = index;
-         updateList(allDrawsColumn, indexButton, countToVisible, bodyColumn);
-      })
-   });
-}
-if (allDrawsColumn.length > 0) {
-
-}

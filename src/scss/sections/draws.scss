@@ -1,6 +1,12 @@
 .draws {
    padding: rem(70) 0 rem(115);
+   @media (max-width: $pc) {
+      padding: rem(40) 0 rem(45);
+   }
    --gap: 25px; // .draws__container
+   @media (max-width: $tablet) {
+      --gap: 12px;
+   }
    &__container {
    }
    // .draws__head
@@ -12,8 +18,17 @@
       &:not(:last-child) {
          margin-bottom: rem(30);
       }
+      @media (max-width: $mobile) {
+         margin-bottom: rem(20);
+      }
       .select {
          min-width: rem(105);
+         @media (max-width: $tablet) {
+            min-width: rem(94);
+         }
+         @media (max-width: $mobileSmall) {
+            min-width: rem(75);
+         }
       }
    }
    // .draws__title
@@ -23,7 +38,13 @@
    &__content {
       background: #f9f9f9;
       padding: rem(50) rem(20) rem(45) rem(45);
-      overflow: hidden;
+      @media (max-width: $tablet) {
+         padding: rem(25) rem(15);
+      }
+      @media (max-width: $mobile) {
+         padding: 0;
+         background: #fff;
+      }
    }
    // .draws__navigation
    &__navigation {
@@ -32,6 +53,12 @@
       gap: rem(10);
       &:not(:last-child) {
          margin-bottom: rem(60);
+         @media (max-width: $pc) {
+            margin-bottom: rem(34);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(18);
+         }
       }
    }
    // .draws__nav-button
@@ -43,6 +70,15 @@
       font-weight: 500;
       color: #5b5b5b;
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: $tablet) {
+         width: 40px;
+         height: 40px;
+         font-size: rem(13);
+      }
+      @media (max-width: $mobileSmall) {
+         width: 39px;
+         height: 39px;
+      }
       &:hover {
          color: #ffffff;
          background-color: #e7642b;
@@ -73,6 +109,23 @@
          position: absolute;
          background: #d7d7d7;
          left: calc(100% + var(--gap));
+         @media (max-width: $mobile) {
+            display: none;
+         }
+      }
+      &:nth-child(odd) {
+         .item-draws {
+            &::after {
+               @media (max-width: $mobile) {
+                  display: block;
+                  width: 1px;
+                  height: var(--gap);
+                  left: 50%;
+                  top: 100%;
+                  transform: translateX(-50%);
+               }
+            }
+         }
       }
       &:nth-child(odd) {
          &::after {
@@ -92,26 +145,14 @@
       &:nth-child(2) {
          .draws__column-cell {
             height: calc(290px + var(--gap));
+            @media (max-width: $tablet) {
+               height: calc(240px + var(--gap));
+            }
          }
       }
       &:nth-child(3) {
          .draws__column-cell {
             height: calc(580px + calc(var(--gap) * 3));
-         }
-      }
-      &:nth-child(4) {
-         .draws__column-cell {
-            height: calc(1060px + calc(var(--gap) * 7));
-         }
-      }
-      &:nth-child(5) {
-         .draws__column-cell {
-            height: calc(2120px + calc(var(--gap) * 11));
-         }
-      }
-      &:nth-child(6) {
-         .draws__column-cell {
-            height: calc(4240px + calc(var(--gap) * 15));
          }
       }
 
@@ -129,7 +170,7 @@
             }
          }
       }
-      &:last-child {
+      &.fin {
          .draws__column-cell {
             &::after {
                display: none;
@@ -148,27 +189,39 @@
       font-size: rem(19);
       font-weight: 500;
       text-align: center;
+      @media (max-width: $tablet) {
+         font-size: rem(15);
+      }
+      @media (max-width: $mobile) {
+         text-align: left;
+         font-size: rem(13);
+      }
       &:not(:last-child) {
          margin-bottom: rem(40);
+         @media (max-width: $tablet) {
+            margin-bottom: rem(30);
+         }
+         @media (max-width: $mobile) {
+            margin-bottom: rem(20);
+         }
       }
    }
    // .draws__item
    &__item {
    }
 }
-.title2 {
-}
-.form {
-}
-.active {
-}
-.r64 {
-}
+
 .item-draws {
    height: 145px;
    background: #efefef;
    width: 326px;
    position: relative;
+   @media (max-width: $tablet) {
+      height: rem(120);
+   }
+   @media (max-width: em(370)) {
+      width: 100%;
+   }
    &::after {
       content: "";
       height: 1px;
@@ -178,6 +231,9 @@
       left: 100%;
       top: 50%;
       transform: translateY(-50%);
+      @media (max-width: $mobile) {
+         display: none;
+      }
    }
    // .item-draws__row
    &__row {
@@ -192,6 +248,10 @@
       gap: rem(9);
       padding: rem(4) rem(15);
       font-weight: 500;
+      @media (max-width: $tablet) {
+         font-size: rem(14);
+         height: 45px;
+      }
       &.winner {
          .item-draws__name {
             padding-right: rem(21);
@@ -241,6 +301,13 @@
       letter-spacing: -0.02em;
       font-size: 13px;
       min-height: rem(30);
+      @media (max-width: $tablet) {
+         font-size: rem(12);
+         padding: rem(9) rem(22) rem(7);
+      }
+      @media (max-width: $mobileSmall) {
+         padding: rem(9) rem(12) rem(7);
+      }
    }
    // .item-draws__round
    &__round {

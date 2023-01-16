@@ -167,6 +167,29 @@
          }
       }
    }
+   &_draws {
+      @media (min-width: $tablet) {
+         .block__decor_1 {
+            left: 18%;
+            top: 28px;
+         }
+         .block__decor_2 {
+            left: 3%;
+         }
+         .block__decor_3 {
+            left: 28%;
+         }
+         .block__decor_4 {
+            left: 43%;
+         }
+         .block__decor_5 {
+            left: 60%;
+         }
+         .block__decor_6 {
+            left: 85%;
+         }
+      }
+   }
    &_players {
       @media (min-width: $tablet) {
          .block__decor_1 {
