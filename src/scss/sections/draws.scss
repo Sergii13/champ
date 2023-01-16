@@ -127,6 +127,15 @@
             }
          }
       }
+      &:last-child {
+         .item-draws {
+            &::after {
+               @media (max-width: $mobile) {
+                  display: none;
+               }
+            }
+         }
+      }
       &:nth-child(odd) {
          &::after {
             top: 50%;
@@ -264,6 +273,7 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      line-height: 1.5;
    }
    // .item-draws__country
    &__country {
