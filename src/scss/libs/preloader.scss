@@ -171,10 +171,6 @@ $colorLeft: #48acce;
 
 // Demo
 
-.infinity {
-   display: block;
-}
-
 html {
    -webkit-font-smoothing: antialiased;
 }
@@ -186,7 +182,9 @@ html {
       box-sizing: border-box;
    }
 }
-
+.infinity {
+   display: none;
+}
 // Center & dribbble
 .loader {
    position: fixed;

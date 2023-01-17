@@ -416,6 +416,9 @@
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
       position: relative;
       z-index: 2;
+      img {
+         max-width: rem(20);
+      }
       @media (max-width: $tablet) {
          height: 35px;
          width: 35px;
@@ -426,7 +429,7 @@
          height: 18px;
          top: 14px;
          right: 14px;
-         background: url("@img/svg/search-white.svg") center no-repeat;
+         background: url("@img/svg/search-white.svg") center/ 21px 21px no-repeat;
          img {
             display: none;
          }
@@ -438,6 +441,8 @@
       }
    }
    &__icon-mob {
+      width: 22px;
+      height: 22px;
       @media (min-width: $mobile) {
          display: none;
       }
@@ -448,6 +453,9 @@
       align-items: center;
       gap: rem(13);
       padding-right: rem(10);
+      img {
+         max-width: rem(22);
+      }
       @media (max-width: $tablet) {
          display: none;
       }

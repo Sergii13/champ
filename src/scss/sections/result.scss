@@ -291,7 +291,7 @@
                right: 0;
             }
             &.star {
-               background: url("@img/svg/star.svg") left no-repeat;
+               background: url("@img/svg/star.svg") left / 12px 12px no-repeat;
                @media (max-width: $tablet) {
                   background: url("@img/svg/star.svg") left / 10px 10px no-repeat;
                }
@@ -347,7 +347,7 @@
          text-overflow: ellipsis;
       }
       &.star {
-         background: url("@img/svg/star.svg") right no-repeat;
+         background: url("@img/svg/star.svg") right / 12px 12px no-repeat;
          @media (max-width: $tablet) {
             background: url("@img/svg/star.svg") right / 10px 10px no-repeat;
          }
