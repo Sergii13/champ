@@ -264,7 +264,10 @@
       &.winner {
          .item-draws__name {
             padding-right: rem(21);
-            background: url("@img/svg/star.svg") center right no-repeat;
+            background: url("@img/svg/star.svg") center right / 12px 12px no-repeat;
+            @media (max-width: $mobile) {
+               background: url("@img/svg/star.svg") center right / 10px 10px no-repeat;
+            }
          }
       }
    }
