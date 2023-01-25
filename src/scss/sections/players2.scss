@@ -169,6 +169,8 @@
       td {
          padding: 28px;
          overflow: hidden;
+         word-break: break-word;
+
          @media (max-width: $tablet) {
             padding: 20px rem(10);
          }
@@ -183,8 +185,17 @@
          }
       }
    }
+   th {
+      padding: 0 28px;
+      @media (max-width: em(600)) {
+         padding: 0;
+      }
+   }
    table th,
    table td {
+      &:nth-child(3) {
+         text-align: left;
+      }
       text-align: center;
       @media (max-width: em(600)) {
          &:not(:last-child) {
