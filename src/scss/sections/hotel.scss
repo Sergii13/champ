@@ -74,9 +74,6 @@
          }
          @media (max-width: $mobileSmall) {
             padding-bottom: percent(201, 353);
-            &:not(:first-child) {
-               display: none;
-            }
          }
       }
    }
@@ -86,9 +83,6 @@
       }
       .gallery__grid-layout {
          height: 100%;
-         @media (max-width: $mobileSmall) {
-            grid-template-columns: repeat(1, 1fr);
-         }
       }
    }
    // .hotel__button-wrap

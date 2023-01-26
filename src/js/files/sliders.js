@@ -7,7 +7,7 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
+import Swiper, { Autoplay, Lazy, Navigation, Pagination } from 'swiper';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -19,7 +19,7 @@ EffectFade, Lazy, Manipulation
 // Базові стилі
 import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
@@ -252,12 +252,13 @@ function initSliders() {
       new Swiper('.main-block__slider', { // Вказуємо склас потрібного слайдера
          // Підключаємо модулі слайдера
          // для конкретного випадку
-         modules: [Navigation, Autoplay, Pagination],
+         modules: [Navigation, Autoplay, Pagination, Lazy],
          observer: true,
          observeParents: true,
          slidesPerView: 1,
          spaceBetween: 0,
          speed: 800,
+         lazy: true,
          loopedSlides: 0,
          // autoplay: {
          //    delay: 5000,
