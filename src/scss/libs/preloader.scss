@@ -205,3 +205,8 @@ html.loading {
       }
    }
 }
+html:not(.loading) {
+   .loader {
+      display: none;
+   }
+}
