@@ -52,6 +52,9 @@
    }
    // .hotel__slider-wrap
    &__slider-wrap {
+      .gallery__slide {
+         height: auto;
+      }
       .gallery__image-ibg.one {
          padding-bottom: percent(475, 1140);
          @media (max-width: $pc) {
@@ -70,9 +73,6 @@
             padding-bottom: percent(245, 554);
          }
          @media (max-width: $tablet) {
-            padding-bottom: percent(201, 353);
-         }
-         @media (max-width: $mobileSmall) {
             padding-bottom: percent(201, 353);
          }
       }

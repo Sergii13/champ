@@ -27,12 +27,12 @@
          gap: rem(17);
       }
       @media (max-width: $mobile) {
-         display: grid;
-         gap: rem(35);
+         display: block;
       }
    }
    // .gallery__slider
    &__slider {
+      min-width: 0;
    }
    // .gallery__wrapper
    &__wrapper {
@@ -47,10 +47,12 @@
       }
    }
    // .gallery__slide
-   &__slide {
+   &__slide.swiper-slide {
+      height: auto;
    }
    // .gallery__grid-layout
    &__grid-layout {
+      height: 100%;
       display: grid;
       gap: rem(30);
       grid-template-columns: repeat(2, 1fr);
@@ -101,6 +103,7 @@
       }
       @media (max-width: $mobile) {
          width: 100%;
+         margin-top: rem(35);
       }
    }
 }
