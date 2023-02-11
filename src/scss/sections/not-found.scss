@@ -1,282 +1,367 @@
 .not-found {
-   background-color: #f7f6f6;
-   padding: 0 rem(50);
-   @media (max-width: em(600)) {
-      padding: 0;
-   }
-   // .not-found__container
-   &__container {
-      padding: rem(200) rem(15);
-      position: relative;
-      @media (max-width: $pc) {
-         padding: rem(160) 0;
+  background-color: #f7f6f6;
+  padding: 0 rem(50);
+  @media (max-width: em(600)) {
+    padding: 0;
+  }
+  // .not-found__container
+  &__container {
+    padding: rem(200) rem(15);
+    position: relative;
+    @media (max-width: $pc) {
+      padding: rem(160) 0;
+    }
+    @media (max-width: em(600)) {
+      padding: rem(85) rem(15);
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  // .not-found__decor
+  &__decor {
+    position: absolute;
+    transform: skewX(-20deg);
+    &.green {
+      background: #0857b7;
+    }
+    &.orange {
+      background: #fbd804;
+    }
+
+    &.small {
+      height: 50px;
+      width: 30px;
+      @media (max-width: $tablet) {
+        height: 31px;
+        width: 23px;
       }
       @media (max-width: em(600)) {
-         padding: rem(85) rem(15);
+        height: 21px;
+        width: 15px;
       }
-   }
-   &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-   }
-
-   // .not-found__decor
-   &__decor {
+    }
+    &.grey {
+      width: 140px;
+      background: #edecec;
+      height: 87px;
+      @media (max-width: $tablet) {
+        width: 97px;
+        height: 57px;
+      }
+      @media (max-width: em(600)) {
+        height: 40px;
+        width: 70px;
+      }
+    }
+    // .not-found__decor_1
+    &_1 {
+      left: 110px;
+      top: 0;
+      @media (max-width: $tablet) {
+        left: 65px;
+      }
+      @media (max-width: em(600)) {
+        display: none;
+      }
+    }
+    // .not-found__decor_2
+    &_2 {
+      top: 253px;
+      left: -20px;
+      @media (max-width: $tablet) {
+        top: 168px;
+      }
+      @media (max-width: em(600)) {
+        top: 53px;
+        left: 20px;
+      }
+    }
+    // .not-found__decor_3
+    &_3 {
+      top: 171px;
+      @media (max-width: $tablet) {
+        top: 113px;
+        background: #fbd804 !important;
+      }
+      @media (max-width: em(600)) {
+        top: 15px;
+        left: 35px;
+        background: #0857b7 !important;
+      }
+    }
+    // .not-found__decor_4
+    &_4 {
+      top: 257px;
+      left: 155px;
+      @media (max-width: $tablet) {
+        top: 57px;
+        left: 180px;
+        background: #0857b7 !important;
+      }
+      @media (max-width: em(600)) {
+        display: none;
+      }
+    }
+    &_5 {
+      top: 0;
+      right: 36px;
+      @media (max-width: $tablet) {
+        top: 94px;
+        right: 0;
+      }
+      @media (max-width: em(600)) {
+        top: 67px;
+        &.grey.big {
+          height: 40px;
+          right: 20px;
+        }
+      }
+    }
+    &_6.grey {
+      height: 35px;
+      top: 247px;
+      right: 90px;
+      @media (max-width: $tablet) {
+        top: 257px;
+        right: 40px;
+        height: 23px;
+      }
+      @media (max-width: em(600)) {
+        background: #fbd804 !important;
+        height: 21px;
+        width: 15px;
+        top: 30px;
+        right: 60px;
+      }
+    }
+    &_7 {
+      bottom: 0;
+      left: 70px;
+      @media (max-width: $tablet) {
+        left: 20px;
+      }
+      @media (max-width: em(600)) {
+        bottom: 0;
+        left: 40px;
+      }
+    }
+    &_8.grey {
+      height: 35px;
+      left: 128px;
+      bottom: 250px;
+      @media (max-width: $tablet) {
+        bottom: 165px;
+        left: 65px;
+        height: 23px;
+      }
+      @media (max-width: em(600)) {
+        bottom: 32px;
+        left: 120px;
+        height: 16px;
+      }
+    }
+    &_9 {
+      right: 150px;
+      bottom: 0;
+      @media (max-width: $tablet) {
+        right: 110px;
+      }
+      @media (max-width: em(600)) {
+        bottom: 0px;
+        right: 20px;
+        height: 50px !important;
+      }
+    }
+    &_10 {
+      bottom: 254px;
+      right: 10px;
+      @media (max-width: $tablet) {
+        bottom: 170px;
+      }
+      @media (max-width: em(600)) {
+        display: none;
+      }
+    }
+    &_11 {
+      bottom: 251px;
+      right: 200px;
+      @media (max-width: $tablet) {
+        bottom: 113px;
+        right: 205px;
+      }
+      @media (max-width: em(600)) {
+        bottom: 0;
+        left: 110px;
+        right: auto;
+      }
+    }
+    &_12 {
+      bottom: 371px;
+      right: -20px;
+      @media (max-width: $tablet) {
+        bottom: 247px;
+        right: -10px;
+      }
+      @media (max-width: em(600)) {
+        bottom: 28px;
+        right: 100px;
+      }
+    }
+    &.big {
+      height: 220px;
+      @media (max-width: $tablet) {
+        height: 144px;
+      }
+      @media (max-width: em(600)) {
+        height: 100px;
+      }
+    }
+  }
+  &__label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 147.619048%; /* 31/21 */
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+  &__text-black {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 146.153846%; /* 19/13 */
+    border-radius: 5px;
+    background: #000;
+    letter-spacing: 0.06em;
+    padding: 5px 13px;
+    text-transform: uppercase;
+    @media (max-width: $tablet) {
+      font-size: 10px;
+    }
+    @media (max-width: $mobile) {
+      padding: 2px rem(5);
+      border-radius: 3px;
+    }
+  }
+  &__line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(20);
+    margin-bottom: rem(35);
+    @media (max-width: $tablet) {
+      gap: rem(15);
+    }
+    @media (max-width: $mobile) {
+      gap: rem(8);
+      margin-bottom: 25px;
+    }
+  }
+  &__line-decor {
+    width: 215px;
+    height: 30px;
+    transform: skewX(-15deg);
+    background: #0857b7;
+    position: relative;
+    @media (max-width: $tablet) {
+      height: 22px;
+      width: 170px;
+    }
+    @media (max-width: $mobile) {
+      height: 14px;
+      width: 92px;
+    }
+    &::after {
+      content: '';
       position: absolute;
-      transform: skewX(-20deg);
-      &.green {
-         background: #48acce;
-      }
-      &.orange {
-         background: $orangeColor;
-      }
-
-      &.small {
-         height: 50px;
-         width: 30px;
-         @media (max-width: $tablet) {
-            height: 31px;
-            width: 23px;
-         }
-         @media (max-width: em(600)) {
-            height: 21px;
-            width: 15px;
-         }
-      }
-      &.grey {
-         width: 140px;
-         background: #edecec;
-         height: 87px;
-         @media (max-width: $tablet) {
-            width: 97px;
-            height: 57px;
-         }
-         @media (max-width: em(600)) {
-            height: 40px;
-            width: 70px;
-         }
-      }
-      // .not-found__decor_1
-      &_1 {
-         left: 110px;
-         top: 0;
-         @media (max-width: $tablet) {
-            left: 65px;
-         }
-         @media (max-width: em(600)) {
-            display: none;
-         }
-      }
-      // .not-found__decor_2
-      &_2 {
-         top: 253px;
-         left: -20px;
-         @media (max-width: $tablet) {
-            top: 168px;
-         }
-         @media (max-width: em(600)) {
-            top: 73px;
-            left: 20px;
-         }
-      }
-      // .not-found__decor_3
-      &_3 {
-         top: 171px;
-         @media (max-width: $tablet) {
-            top: 113px;
-         }
-         @media (max-width: em(600)) {
-            top: 35px;
-            left: 35px;
-         }
-      }
-      // .not-found__decor_4
-      &_4 {
-         top: 257px;
-         left: 155px;
-         @media (max-width: $tablet) {
-            top: 170px;
-            left: 100px;
-         }
-         @media (max-width: em(600)) {
-            display: none;
-         }
-      }
-      &_5 {
-         top: 0;
-         right: 36px;
-         @media (max-width: $tablet) {
-            top: 94px;
-            right: 0;
-         }
-         @media (max-width: em(600)) {
-            top: 73px;
-            &.grey.big {
-               height: 40px;
-               right: 50px;
-            }
-         }
-      }
-      &_6.grey {
-         height: 35px;
-         top: 247px;
-         right: 90px;
-         @media (max-width: $tablet) {
-            top: 257px;
-            right: 40px;
-            height: 23px;
-         }
-         @media (max-width: em(600)) {
-            background: #48acce;
-            height: 21px;
-            width: 15px;
-            top: 35px;
-            right: 90px;
-         }
-      }
-      &_7 {
-         bottom: 0;
-         left: 70px;
-         @media (max-width: $tablet) {
-            left: 20px;
-         }
-         @media (max-width: em(600)) {
-            bottom: 26px;
-            left: 40px;
-         }
-      }
-      &_8.grey {
-         height: 35px;
-         left: 128px;
-         bottom: 250px;
-         @media (max-width: $tablet) {
-            bottom: 165px;
-            left: 65px;
-            height: 23px;
-         }
-         @media (max-width: em(600)) {
-            bottom: 138px;
-            height: 16px;
-         }
-      }
-      &_9 {
-         right: 150px;
-         bottom: 0;
-         @media (max-width: $tablet) {
-            right: 110px;
-         }
-         @media (max-width: em(600)) {
-            bottom: 26px;
-            right: 50px;
-         }
-      }
-      &_10 {
-         bottom: 254px;
-         right: 10px;
-         @media (max-width: $tablet) {
-            bottom: 170px;
-         }
-         @media (max-width: em(600)) {
-            bottom: 138px;
-            &.grey {
-               right: 25px;
-               height: 16px;
-            }
-         }
-      }
-      &_11 {
-         bottom: 251px;
-         right: 200px;
-         @media (max-width: $tablet) {
-            bottom: 170px;
-            right: 145px;
-         }
-         @media (max-width: em(600)) {
-            display: none;
-         }
-      }
-      &_12 {
-         bottom: 371px;
-         right: -20px;
-         @media (max-width: $tablet) {
-            bottom: 247px;
-            right: -10px;
-         }
-         @media (max-width: em(600)) {
-            display: none;
-         }
-      }
-      &.big {
-         height: 220px;
-         @media (max-width: $tablet) {
-            height: 144px;
-         }
-         @media (max-width: em(600)) {
-            height: 100px;
-         }
-      }
-   }
-   // .not-found__title
-   &__title {
-      font-weight: 500;
-      font-size: rem(212);
-      letter-spacing: 0.015em;
-      color: #131313;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: #fbd804;
+      bottom: 0;
+    }
+  }
+  // .not-found__title
+  &__title {
+    font-weight: 500;
+    font-size: rem(212);
+    line-height: 100%; /* 212/212 */
+    letter-spacing: 0.015em;
+    background: linear-gradient(#0857b7 53%, #fbd804 52%);
+    /* you can change the colors based on your preference */
+    background-clip: text;
+    /*add this line, it defines how far the background should extend within an element, here we set it to text */
+    -webkit-background-clip: text;
+    /* add this line, for browsers compatibility */
+    -webkit-text-fill-color: transparent;
+    @media (max-width: $pc) {
+      font-size: rem(170);
+    }
+    @media (max-width: $tablet) {
+      font-size: 145px;
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(93);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(50);
       @media (max-width: $pc) {
-         font-size: rem(170);
+        margin-bottom: rem(32);
       }
       @media (max-width: $mobile) {
-         font-size: rem(158);
+        margin-bottom: rem(20);
       }
-      &:not(:last-child) {
-         margin-bottom: rem(70);
-         @media (max-width: $pc) {
-            margin-bottom: rem(50);
-         }
-         @media (max-width: $mobile) {
-            margin-bottom: rem(32);
-         }
-      }
-   }
-   // .not-found__subtitle
-   &__subtitle {
-      font-size: rem(24);
-      line-height: math.div(35, 24);
-      font-weight: 500;
+    }
+  }
+  // .not-found__subtitle
+  &__subtitle {
+    font-size: rem(24);
+    line-height: math.div(35, 24);
+    font-weight: 500;
+    @media (max-width: $tablet) {
+      font-size: rem(20);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(25);
       @media (max-width: $tablet) {
-         font-size: rem(20);
+        margin-bottom: rem(20);
+      }
+    }
+  }
+  // .not-found__text
+  &__text {
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    color: #5b5b5b;
+    font-family: 'MyriadPro';
+    @media (max-width: $tablet) {
+      font-size: rem(13);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(45);
+      @media (max-width: $pc) {
+        margin-bottom: rem(25);
       }
       @media (max-width: $mobile) {
-         font-size: rem(16);
+        margin-bottom: 20px;
       }
-      &:not(:last-child) {
-         margin-bottom: rem(25);
-         @media (max-width: $tablet) {
-            margin-bottom: rem(20);
-         }
-      }
-   }
-   // .not-found__text
-   &__text {
-      font-size: rem(18);
-      line-height: math.div(27, 18);
-      color: #5b5b5b;
-      font-family: "MyriadPro";
-      @media (max-width: $tablet) {
-         font-size: rem(13);
-      }
-      &:not(:last-child) {
-         margin-bottom: rem(45);
-         @media (max-width: $pc) {
-            margin-bottom: rem(30);
-         }
-      }
-   }
-   // .not-found__button
-   &__button {
-   }
+    }
+  }
+  // .not-found__button
+  &__button {
+    background: #024a5c;
+  }
 }
