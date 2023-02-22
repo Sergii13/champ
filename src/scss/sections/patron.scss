@@ -1,59 +1,59 @@
 .patron {
-   color: #fff;
-   background: url("@img/sponsor/patron-bg.png") 0 0 / cover no-repeat, #024a5c;
-   // .patron__container
-   &__container {
-   }
-   // .patron__title
-   &__title {
-      text-align: center;
-      color: #fff;
-      &:not(:last-child) {
-         margin-bottom: rem(70);
-         @media (max-width: $pc) {
-            margin-bottom: rem(30);
-         }
+  color: #fff;
+  background: url('@img/sponsor/patron-bg.webp') 0 0 / cover no-repeat, #024a5c;
+  // .patron__container
+  &__container {
+  }
+  // .patron__title
+  &__title {
+    text-align: center;
+    color: #fff;
+    &:not(:last-child) {
+      margin-bottom: rem(70);
+      @media (max-width: $pc) {
+        margin-bottom: rem(30);
       }
-   }
-   // .patron__grid
-   &__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: rem(30);
-      @media (max-width: $tablet) {
-         gap: rem(15);
-      }
-      @media (max-width: $mobile) {
-         grid-template-columns: repeat(2, 1fr);
-      }
-      @media (max-width: em(500)) {
-         grid-template-columns: repeat(1, 1fr);
-      }
-      @media (max-width: $mobileSmall) {
-         gap: rem(10);
-      }
-   }
-   // .patron__item
-   &__item {
-      border-radius: 14px;
-      background-color: #045a6f;
-      min-height: rem(102);
-      padding: rem(15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 500;
-      font-size: rem(21);
-      text-transform: uppercase;
-      text-align: center;
-      @media (max-width: $tablet) {
-         min-height: rem(65);
-         font-size: rem(15);
-      }
-      @media (max-width: $mobile) {
-         border-radius: 5px;
-         font-size: rem(16);
-         min-height: rem(50);
-      }
-   }
+    }
+  }
+  // .patron__grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+    @media (max-width: $tablet) {
+      gap: rem(15);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: em(500)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: $mobileSmall) {
+      gap: rem(10);
+    }
+  }
+  // .patron__item
+  &__item {
+    border-radius: 14px;
+    background-color: #045a6f;
+    min-height: rem(102);
+    padding: rem(15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: rem(21);
+    text-transform: uppercase;
+    text-align: center;
+    @media (max-width: $tablet) {
+      min-height: rem(65);
+      font-size: rem(15);
+    }
+    @media (max-width: $mobile) {
+      border-radius: 5px;
+      font-size: rem(16);
+      min-height: rem(50);
+    }
+  }
 }
