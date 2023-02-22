@@ -100,7 +100,8 @@
       height: 100% !important;
     }
     @media (max-width: $tablet) {
-      width: rem(219);
+      width: rem(279);
+      height: 700px;
       iframe {
         width: 100% !important;
       }
